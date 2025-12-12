@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&display=swap');
+
+@font-face {
+  font-family: 'Dead Stock';
+  src: url('/src/assets/fonts/DeadStock.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --color-primary: #442fe;
+    --color-dark: #333333;
+    --color-cyan: #00FFC8;
+    --color-pink: #FF006B;
+    --color-white: #FFFFFF;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Dosis', sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Dead Stock', 'Dosis', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  p, span, a, button, div {
+    font-family: 'Dosis', sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    font-family: 'Dosis', sans-serif;
+    cursor: pointer;
+  }
+}
