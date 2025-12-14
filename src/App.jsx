@@ -8,10 +8,14 @@ const RutaFormativa = lazy(() => import('./pages/RutaFormativa.jsx'));
 const Profe = lazy(() => import('./pages/Profe.jsx'));
 const Wilson = lazy(() => import('./pages/Wilson.jsx'));
 const LaEscuelaDelEmprendedor = lazy(() => import('./pages/LaEscuelaDelEmprendedor.jsx'));
+import WelcomePopup from './components/WelcomePopup.jsx';
+
 
 function App() {
   return (
     <BrowserRouter>
+          <WelcomePopup />
+
       <div className="min-h-screen bg-black text-white">
         <Header />
         <main>

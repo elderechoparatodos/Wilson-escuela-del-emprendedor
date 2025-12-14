@@ -4,17 +4,18 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <section className="hero-section">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12 lg:pt-16 lg:pb-24 md:mt-10">
-        {/* Hero Section - Imagen y Texto */}
-        <div className="flex flex-col md:flex-row items-center justify-around gap-2 md:gap-12 mb-8 md:mb-16  ">
-          {/* Texto Hero */}
-          <div className="hero-container flex flex-col justify-center w-full md:w-1/2 order-2 md:order-1">
-            <h1 className="hero-title text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-center md:text-left ">
-              <span className="highlight-white titulo block mb-2 md:mb-4">
+    <>
+      <section className="hero-section ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4 lg:pt-16 lg:pb-8 md:mt-10 ">
+          {/* Hero Section - Imagen y Texto */}
+          <div className="padre-hero flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-4 md:mb-8">
+            {/* Texto Hero */}
+            <div className="hero-container  flex flex-col justify-center w-full md:w-1/2 order-2 md:order-1">
+              <h1 className="hero-title text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-center md:text-left">
+                <span className="highlight-white titulo block mb-2 md:mb-4">
                 Es posible
               </span>
-              <div className="min-h-[80px] sm:min-h-[96px] md:min-h-[110px] lg:min-h-[170px] ">
+              <div className="min-h-[60px] sm:min-h-[72px] md:min-h-[80px] lg:min-h-[90px]">
                 <TypewriterText
                   words={[
                     "emprender",
@@ -39,20 +40,85 @@ export default function Home() {
             />
           </div>
         </div>
+        </div>
+      </section>
 
-        {/* Sección Principal */}
-        <div className="max-w-6xl mx-auto mb-8 md:mb-16">
-          <div className="glass-card mb-8 md:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-center text-emerald-400">
-              Aprende y emprende con La Escuela del Emprendedor
-            </h2>
-            <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-center mb-8 text-sky-400">
-              Impulsa tu negocio con formación práctica y de calidad.
-            </p>
-            <p className="text-lg sm:text-xl md:text-2xl leading-relaxed mb-8 text-center md:text-left">
-              Accede a cursos diseñados especialmente para emprendedores y
-              microempresarios en áreas clave como Marketing, Administración,
-              Finanzas y Gestión Legal.
+      {/* Sección Video y Senado - Fondo diferente */}
+      <section className="bg-gradient-to-b from-purple-900/30 via-indigo-900/20 to-black py-8 md:py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* En móvil: columna (video, imagen). En desktop: fila (imagen, video, imagen) */}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6">
+            {/* Imagen Cámara Izquierda - Solo visible en desktop */}
+            <div className="hidden lg:block lg:w-1/5">
+              <img
+                src="/camara.PNG"
+                alt="camara"
+                className="w-full h-auto rounded-xl shadow-2xl"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Video Central */}
+            <div className="w-full lg:w-4/5 order-1 lg:order-2">
+              <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/ho418mOxapE?autoplay=1&mute=1&loop=1&playlist=ho418mOxapE"
+                  title="Video Introductorio - La Escuela del Emprendedor"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+
+            {/* Imagen Senado Derecha - Solo visible en desktop */}
+            <div className="hidden lg:block lg:w-1/5 order-3">
+              <img
+                src="/senado.PNG"
+                alt="Senado"
+                className="w-full h-auto rounded-xl shadow-2xl"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Contenedor de imágenes móvil - Senado y Cámara juntas */}
+            <div className="container-votos flex flex-col gap-2 w-2/3 sm:w-1/2 lg:hidden order-2">
+              <img
+                src="/senado.PNG"
+                alt="Senado"
+                className=" w-full h-auto rounded-xl shadow-2xl"
+                loading="lazy"
+              />
+              <img
+                src="/camara.PNG"
+                alt="Cámara"
+                className="images-votos w-full h-auto rounded-xl shadow-2xl"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Continuación del contenido */}
+      <section className="bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
+          {/* Sección Principal */}
+          <div className="max-w-6xl mx-auto mb-8 md:mb-16">
+            <div className="glass-card mb-8 md:mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-center text-emerald-400">
+                Aprende y emprende con La Escuela del Emprendedor
+              </h2>
+              <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-center mb-8 text-sky-400">
+                Impulsa tu negocio con formación práctica y de calidad.
+              </p>
+              <p className="text-lg sm:text-xl md:text-2xl leading-relaxed mb-8 text-center md:text-left">
+                Accede a cursos diseñados especialmente para emprendedores y
+                microempresarios en áreas clave como Marketing, Administración,
+                Finanzas y Gestión Legal.
             </p>
             <div className="grid sm:grid-cols-2 gap-6 md:gap-8 text-lg sm:text-xl md:text-2xl">
               <div className="flex items-start gap-4">
@@ -144,7 +210,8 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 }
